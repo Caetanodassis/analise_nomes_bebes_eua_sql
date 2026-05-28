@@ -214,10 +214,7 @@ ORDER BY quantidade_de_nomes DESC;
 **Python**
 ```python
 nascimento_por_estado = (
-    df_nomes
-    .groupby('State')['Births']
-    .sum()
-    .sort_values(ascending=False)
+    df_nomes.groupby('State')['Births'].sum().sort_values(ascending=False)
 )
 print(nascimento_por_estado)
 ```
